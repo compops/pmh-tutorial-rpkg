@@ -1,17 +1,14 @@
 ## Purpose
 This package provides some minimal working examples for implementing 
 the particle Metropolis-Hastings (PMH) algorithm for parameter inference 
-in nonlinear state space models. The package accompanies a tutorial:
+in nonlinear state space models. The package accompanies the tutorial:
 
-Dahlin, J. & Schön, T. B. "Getting started with particle Metropolis-Hastings for 
-inference in nonlinear dynamical models." pre-print, arXiv:1511.01707, 2015.
+J. Dahlin and T. B. Schön, **Getting started with particle Metropolis-Hastings for inference in nonlinear models**. Pre-print, arXiv:1511:01707, 2017.
 
-Currently available at:
-
-http://arxiv.org/pdf/1511.01707
+The papers are available as a preprint from http://arxiv.org/pdf/1511.01707
 
 ## Usage
-The main functions of the package are the five examples connected to the paper:
+The main functions of the package are the five examples connected to the tutorial:
 
 * ** example1_lgss() ** Demostrates the particle filter for estimating the
 state in a linear Gaussian state space model.
@@ -30,13 +27,20 @@ stochastic volatility model using a reparameterised model.
 
 ## Simple example
 The examples can be executed by e.g.
-
+``` R
 example2_lgss()
-
+``` 
 which will recreate on of the plots in the aforementioned tutorial. See
 the reference for more background and details.
 
 ## How do I get it?
 The package is available through CRAN and can be installed by
-
+``` R
 install.packages("pmhtutorial")
+``` 
+or directly from GitHub by
+``` R
+install.packages("devtools")
+devtools::install_github("compops/pmh-tutorial-rpkg")
+``` 
+
