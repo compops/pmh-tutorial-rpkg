@@ -10,19 +10,19 @@ The papers are available as a preprint from http://arxiv.org/pdf/1511.01707
 ## Usage
 The main functions of the package are the five examples connected to the tutorial:
 
-* ** example1_lgss() ** Demostrates the particle filter for estimating the
+* **example1_lgss()** Demostrates the particle filter for estimating the
 state in a linear Gaussian state space model.
 
-* ** example2_lgss() ** Demostrates PMH for estimating the parameters in a 
+* **example2_lgss()** Demostrates PMH for estimating the parameters in a 
 linear Gaussian state space model.
 
-* ** example3_sv() ** Demostrates PMH for estimating the parameters in a 
+* **example3_sv()** Demostrates PMH for estimating the parameters in a 
 stochastic volatility model.
 
-* ** example4_sv() ** Demostrates PMH for estimating the parameters in a 
+* **example4_sv()** Demostrates PMH for estimating the parameters in a 
 stochastic volatility model using a tailored proposal distribution.
 
-* ** example5_sv() ** Demostrates PMH for estimating the parameters in a 
+* **example5_sv()** Demostrates PMH for estimating the parameters in a 
 stochastic volatility model using a reparameterised model.
 
 ## Simple example
