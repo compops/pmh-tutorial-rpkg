@@ -5,8 +5,8 @@
 \title{Particle Metropolis-Hastings algorithm for a linear Gaussian state space 
 model}
 \usage{
-particleMetropolisHastings(y, initialPhi, sigmav, sigmae, noParticles,
-  initialState, noIterations, stepSize)
+particleMetropolisHastings(y, initialPhi, sigmav, sigmae, 
+  noParticles, initialState, noIterations, stepSize)
 }
 \arguments{
 \item{y}{Observations from the model for \eqn{t=1,...,T}.}
@@ -61,7 +61,7 @@ hist(pmhOutput, breaks=nbins, main="", xlab=expression(phi),
   ylab="marginal posterior", freq=FALSE, col="#7570B3")
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

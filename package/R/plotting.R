@@ -8,7 +8,7 @@
 
 #' Make plots for tutorial
 #' @description 
-#' ...
+#' Creates diagnoistic plots from runs of the particle Metropolis-Hastings algorithm.
 #' @param y Observations from the model for \eqn{t=1,...,T}.
 #' @param res The output from a run of particleMetropolisHastings,
 #' particleMetropolisHastingsSVmodel or

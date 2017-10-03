@@ -5,12 +5,12 @@
 \title{Parameter estimation in a simple stochastic volatility model}
 \usage{
 example3_sv(noBurnInIterations = 2500, noIterations = 7500,
-  noParticles = 500, initialTheta = c(0, 0.9, 0.2), stepSize = diag(c(0.1,
-  0.01, 0.05)^2))
+  noParticles = 500, initialTheta = c(0, 0.9, 0.2), 
+  stepSize = diag(c(0.1, 0.01, 0.05)^2))
 }
 \arguments{
 \item{noBurnInIterations}{The number of burn-in iterations in the PMH 
-algorithm. Must be smaller than noIterations.}
+algorithm. Must be smaller than \code{noIterations}.}
 
 \item{noIterations}{The number of iterations in the PMH algorithm. 100 
 iterations takes about a minute on a laptop to execute.}
@@ -67,7 +67,7 @@ See Section 5 in the reference for more details.
 example3_sv(noBurnInIterations=200, noIterations=500)
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

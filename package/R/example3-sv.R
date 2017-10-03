@@ -24,7 +24,7 @@
 #' pilot run to estimate the posterior covariance and therefore increase the 
 #' mixing of the Markov chain.
 #' @param noBurnInIterations The number of burn-in iterations in the PMH 
-#' algorithm. Must be smaller than noIterations.
+#' algorithm. Must be smaller than \code{noIterations}.
 #' @param noIterations The number of iterations in the PMH algorithm. 100 
 #' iterations takes about a minute on a laptop to execute.
 #' @param noParticles The number of particles to use when estimating the likelihood.

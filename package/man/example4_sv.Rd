@@ -9,7 +9,7 @@ example4_sv(noBurnInIterations = 2500, noIterations = 7500,
 }
 \arguments{
 \item{noBurnInIterations}{The number of burn-in iterations in the PMH 
-algorithm. Must be smaller than noIterations.}
+algorithm. Must be smaller than \code{noIterations}.}
 
 \item{noIterations}{The number of iterations in the PMH algorithm. 100 
 iterations takes about a minute on a laptop to execute.}
@@ -51,8 +51,8 @@ log-returns from the OMXS30 index during the period from January 2, 2012
 to January 2, 2014.
 
 This version of the code makes use of a proposal that is tuned using the 
-pilot run from \code{\link{example3_sv}} and therefore have better mixing 
-properties.
+pilot run obtained by running the \code{\link{example3_sv}} and therefore 
+have better mixing properties.
 }
 \note{
 See Section 6.3.1 in the reference for more details.
@@ -63,7 +63,7 @@ See Section 6.3.1 in the reference for more details.
 example4_sv(noBurnInIterations=200, noIterations=500)
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

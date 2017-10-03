@@ -9,7 +9,7 @@ example5_sv(noBurnInIterations = 2500, noIterations = 7500,
 }
 \arguments{
 \item{noBurnInIterations}{The number of burn-in iterations in the PMH 
-algorithm. Must be smaller than noIterations.}
+algorithm. Must be smaller than \code{noIterations}.}
 
 \item{noIterations}{The number of iterations in the PMH algorithm. 100 
 iterations takes about a minute on a laptop to execute.}
@@ -64,7 +64,7 @@ See Section 6.3.2 in the reference for more details.
 example5_sv(noBurnInIterations=200, noIterations=500)
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

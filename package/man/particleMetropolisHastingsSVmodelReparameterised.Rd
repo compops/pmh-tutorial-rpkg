@@ -5,8 +5,8 @@
 \title{Particle Metropolis-Hastings algorithm for a stochastic volatility model
 model}
 \usage{
-particleMetropolisHastingsSVmodelReparameterised(y, initialTheta, noParticles,
-  noIterations, stepSize)
+particleMetropolisHastingsSVmodelReparameterised(y, initialTheta, 
+  noParticles, noIterations, stepSize)
 }
 \arguments{
 \item{y}{Observations from the model for \eqn{t=1,...,T}.}
@@ -58,14 +58,15 @@ pmhOutput <- particleMetropolisHastingsSVmodelReparameterised(
 nbins <- floor(sqrt(noIterations))
 par(mfrow=c(3, 1))
 hist(pmhOutput$theta[,1], breaks=nbins, main="", xlab=expression(mu), 
-     ylab="marginal posterior", freq=FALSE, col="#7570B3")
+  ylab="marginal posterior", freq=FALSE, col="#7570B3")
 hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi), 
-     ylab="marginal posterior", freq=FALSE, col="#E7298A")
-hist(pmhOutput$theta[,3], breaks=nbins, main="", xlab=expression(sigma[v]), 
-     ylab="marginal posterior", freq=FALSE, col="#66A61E")
+  ylab="marginal posterior", freq=FALSE, col="#E7298A")
+hist(pmhOutput$theta[,3], breaks=nbins, main="", 
+  xlab=expression(sigma[v]), ylab="marginal posterior", 
+  freq=FALSE, col="#66A61E")
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

@@ -48,14 +48,14 @@ kfOutput <- kalmanFilter(d$y, theta,
 # Plot the estimate and the true state
 par(mfrow=c(3, 1))
 plot(d$x, type="l", xlab="time", ylab="true state", bty="n", 
-     col="#1B9E77")
+  col="#1B9E77")
 plot(kfOutput$xHatFiltered, type="l", xlab="time", 
-     ylab="Kalman filter estimate", bty="n", col="#D95F02")
+  ylab="Kalman filter estimate", bty="n", col="#D95F02")
 plot(d$x-kfOutput$xHatFiltered, type="l", xlab="time", 
-     ylab="difference", bty="n", col="#7570B3")
+  ylab="difference", bty="n", col="#7570B3")
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

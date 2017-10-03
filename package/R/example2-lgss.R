@@ -21,7 +21,7 @@
 #' the difficulty when tuning the proposal and the impact of a too 
 #' small/large step length.
 #' @param noBurnInIterations The number of burn-in iterations in the PMH algorithm.
-#' This parameter must be smaller than noIterations.
+#' This parameter must be smaller than \code{noIterations}.
 #' @param noIterations The number of iterations in the PMH algorithm. 100 iterations 
 #' takes about ten seconds on a laptop to execute. 5000 iterations are used 
 #' in the reference below.

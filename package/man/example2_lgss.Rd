@@ -9,7 +9,7 @@ example2_lgss(noBurnInIterations = 1000, noIterations = 5000,
 }
 \arguments{
 \item{noBurnInIterations}{The number of burn-in iterations in the PMH algorithm.
-This parameter must be smaller than noIterations.}
+This parameter must be smaller than \code{noIterations}.}
 
 \item{noIterations}{The number of iterations in the PMH algorithm. 100 iterations 
 takes about ten seconds on a laptop to execute. 5000 iterations are used 
@@ -45,7 +45,7 @@ See Section 4.2 in the reference for more details.
 example2_lgss(noBurnInIterations=50, noIterations=200)
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
+Dahlin, J. & Schön, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }
