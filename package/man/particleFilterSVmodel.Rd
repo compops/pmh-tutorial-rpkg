@@ -47,11 +47,13 @@ pfOutput <- particleFilterSVmodel(y, theta, noParticles=500)
 
 # Plot the estimate and the true state
 par(mfrow=c(2, 1))
-plot(y, type="l", xlab="time", ylab="log-returns", bty="n", col="#1B9E77")
-plot(pfOutput$xHatFiltered, type="l", xlab="time", ylab="estimate of log-volatility", bty="n", col="#D95F02")
+plot(y, type="l", xlab="time", ylab="log-returns", bty="n", 
+     col="#1B9E77")
+plot(pfOutput$xHatFiltered, type="l", xlab="time", 
+     ylab="estimate of log-volatility", bty="n", col="#D95F02")
 }
 \references{
-Dahlin, J. & Schoen, T. B. "Getting started with particle 
+Dahlin, J. & Schon, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

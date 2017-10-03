@@ -48,9 +48,9 @@ d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02",
 y <- as.numeric(100 * diff(log(d$"Index Value")))
 
 # Estimate the marginal posterior for phi
-pmhOutput <- particleMetropolisHastingsSVmodel(y, initialTheta = c(0, 0.9, 0.2), 
-                                        noParticles=500, noIterations=noIterations, 
-                                        stepSize=diag(c(0.05, 0.0002, 0.002)))
+pmhOutput <- particleMetropolisHastingsSVmodel(y, 
+  initialTheta = c(0, 0.9, 0.2), noParticles=500, 
+  noIterations=noIterations, stepSize=diag(c(0.05, 0.0002, 0.002)))
 
 # Plot the estimate
 nbins <- floor(sqrt(noIterations))
