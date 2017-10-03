@@ -43,4 +43,3 @@ or directly from GitHub by
 install.packages("devtools")
 devtools::install_github("compops/pmh-tutorial-rpkg")
 ``` 
-
