@@ -1,0 +1,14 @@
+# Get the data from Quandl
+library("Quandl")
+d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02", 
+            end_date="2014-01-02", type="zoo")
+y <- as.numeric(100 * diff(log(d$"Index Value")))
+
+# Estimate the filtered state using a particle filter
+theta <- c(-0.10, 0.97, 0.15)
+pfOutput <- particleFilterSVmodel(y, theta, noParticles=500)
+
+# Plot the estimate and the true state
+par(mfrow=c(2, 1))
+plot(y, type="l", xlab="time", ylab="log-returns", bty="n", col="#1B9E77")
+plot(pfOutput$xHatFiltered, type="l", xlab="time", ylab="estimate of log-volatility", bty="n", col="#D95F02")

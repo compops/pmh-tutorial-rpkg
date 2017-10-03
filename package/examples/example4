@@ -1,0 +1,3 @@
+# Change to noIterations=2500, noBurnInIterations=500 for better results
+# but longer run times
+example4_sv(noBurnInIterations=200, noIterations=500)
