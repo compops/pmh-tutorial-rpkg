@@ -42,7 +42,7 @@ See Section 4 in the reference for more details.
 }
 \examples{
 # Change to 2500 for better results
-noIterations <- 500
+noIterations <- 200
 
 # Generates 100 observations from a linear state space model with
 # (phi, sigma_e, sigma_v) = (0.5, 1.0, 0.1) and zero initial state.

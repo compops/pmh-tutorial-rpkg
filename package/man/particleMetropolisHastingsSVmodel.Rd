@@ -39,7 +39,7 @@ See Section 5 in the reference for more details.
 }
 \examples{
 # Change to 2500 for better results
-noIterations <- 500
+noIterations <- 200
 
 # Get the data from Quandl
 library("Quandl")

@@ -61,7 +61,7 @@ See Section 6.3.2 in the reference for more details.
 \examples{
 # Change to noIterations=2500, noBurnInIterations=500 for better results
 # but longer run times
-example5_sv(noBurnInIterations=200, noIterations=500)
+example5_sv(noBurnInIterations=50, noIterations=200)
 }
 \references{
 Dahlin, J. & Schön, T. B. "Getting started with particle 
