@@ -1,14 +1,17 @@
 ## Test environments
-* Ubuntu 17.04, R 3.4.1
-* Windows 10, R 3.4.1
+* Ubuntu 17.04 (64-bit), R 3.4.1
+* Windows 10 (64-bit), R 3.4.2
+* Windows Server 2008 (64-bit), R 3.4.2
+* Windows Server 2008 (64-bit), R 3.5.0
 
 ## R CMD check results
-There were no NOTEs or ERRORs.
+There were no WARNINGSs or ERRORs.
 
-There was 1 WARNING:
-* LaTeX errors when creating PDF version. This typically indicates Rd problems.
-  However, no error was visible in *Rdlatex.log*.
+There were one NOTE:
+* New maintainer:
+    Johan Dahlin <uni@johandahlin.com>
+  Old maintainer(s):
+    Johan Dahlin <johan.dahlin@liu.se>
 
 ## Downstream dependencies
 There are currently no downstream dependencies for this package.
-

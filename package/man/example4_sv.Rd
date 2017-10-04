@@ -58,9 +58,11 @@ have better mixing properties.
 See Section 6.3.1 in the reference for more details.
 }
 \examples{
+\dontrun{
 # Change to noBurnInIterations=500, noIterations=5000 for better results
 # but longer run times. The numbers here are only useful for code tests.
 example4_sv(noBurnInIterations=50, noIterations=200)
+}
 }
 \references{
 Dahlin, J. & Schön, T. B. "Getting started with particle 

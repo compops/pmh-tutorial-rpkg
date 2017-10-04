@@ -38,6 +38,7 @@ a stochastic volatility model of the form \eqn{x_t = \mu + \phi ( x_{t-1} -
 See Section 5 in the reference for more details.
 }
 \examples{
+\dontrun{
 # Change to 2500 for better results but longer run times. 
 # The number here is only useful for code tests.
 noIterations <- 200
@@ -65,6 +66,7 @@ hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi),
 hist(pmhOutput$theta[,3], breaks=nbins, main="", 
   xlab=expression(sigma[v]), ylab="marginal posterior", 
   freq=FALSE, col="#66A61E")
+}
 }
 \references{
 Dahlin, J. & Schön, T. B. "Getting started with particle 

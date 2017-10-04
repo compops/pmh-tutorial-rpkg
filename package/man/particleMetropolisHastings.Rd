@@ -41,6 +41,7 @@ independent standard Gaussian random variables, i.e.\eqn{N(0,1)}.
 See Section 4 in the reference for more details.
 }
 \examples{
+\dontrun{
 # Change to 2500 for better results but longer run times. 
 # The number here is only useful for code tests.
 noIterations <- 200
@@ -60,6 +61,7 @@ nbins <- floor(sqrt(noIterations))
 par(mfrow=c(1, 1))
 hist(pmhOutput, breaks=nbins, main="", xlab=expression(phi), 
   ylab="marginal posterior", freq=FALSE, col="#7570B3")
+}
 }
 \references{
 Dahlin, J. & Schön, T. B. "Getting started with particle 
