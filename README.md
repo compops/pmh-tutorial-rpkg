@@ -40,10 +40,12 @@ or directly from GitHub by
 install.packages("devtools")
 devtools::install_github("compops/pmh-tutorial-rpkg/package")
 ``` 
+or downloaded as a binary from GitHub https://github.com/compops/pmh-tutorial-rpkg/releases/download/v1.1/pmhtutorial_1.1.tar.gz.
+
 
 ## Dependencies
-The package requires Quandl to be able to download financial data from the Internet. It can be installed by executing
+The package requires Quandl and mvtnorm to be able to download financial data from the Internet and to generate random variables from the multivariate Gaussian distribution. These can be installed by executing
 ``` R
-install.packages("Quandl")
+install.packages(c("Quandl", "mvtnorm"))
 ``` 
 in the R console if it is not installed at the same time as this package.
