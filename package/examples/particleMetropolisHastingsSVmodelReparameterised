@@ -1,4 +1,5 @@
-# Change to 2500 for better results
+# Change to 2500 for better results but longer run times. 
+# The number here is only useful for code tests.
 noIterations <- 200
 
 # Get the data from Quandl

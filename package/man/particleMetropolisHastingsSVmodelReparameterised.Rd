@@ -40,7 +40,8 @@ run the Markov chain on the  parameters \eqn{\vartheta=\{\mu,\psi,
 See Section 5 in the reference for more details.
 }
 \examples{
-# Change to 2500 for better results
+# Change to 2500 for better results but longer run times. 
+# The number here is only useful for code tests.
 noIterations <- 200
 
 # Get the data from Quandl

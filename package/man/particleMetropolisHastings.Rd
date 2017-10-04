@@ -41,7 +41,8 @@ independent standard Gaussian random variables, i.e.\eqn{N(0,1)}.
 See Section 4 in the reference for more details.
 }
 \examples{
-# Change to 2500 for better results
+# Change to 2500 for better results but longer run times. 
+# The number here is only useful for code tests.
 noIterations <- 200
 
 # Generates 100 observations from a linear state space model with
