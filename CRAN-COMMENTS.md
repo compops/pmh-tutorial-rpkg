@@ -7,7 +7,7 @@
 ## R CMD check results
 There were no WARNINGSs or ERRORs.
 
-There were one NOTE:
+There was one NOTE:
 * New maintainer:
     Johan Dahlin <uni@johandahlin.com>
   Old maintainer(s):
