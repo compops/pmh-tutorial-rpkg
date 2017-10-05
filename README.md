@@ -8,15 +8,15 @@ The tutorial is available as a preprint from http://arxiv.org/pdf/1511.01707. Ad
 ## Usage
 The main functions of the package are the five examples connected to the tutorial:
 
-* **example1_lgss()** demostrates the particle filter for estimating the state in a linear Gaussian state space (LGSS) model, see Section 3.2 in the tutorial.
+**example1_lgss()** State estimation in a LGSS model using the KM and a fully-adapted PF (faPF). The code is discussed in Section 3.1 and the results are presented in Section 3.2 as Figure 4 and Table 1.
 
-* **example2_lgss()** demostrates PMH for estimating the parameters in an LGSS model, see Section 4.2 in the tutorial.
+**example2_lgss()** Parameter estimation of one parameter in the LGSS model using PMH with the faPF as the likelihood estimator. The code is discussed in Section 4.1 and the results are presented in Section 4.2 as Figure 5.
 
-* **example3_sv()** demostrates PMH for estimating the parameters in a stochastic volatility (SV) model, see Section 5 in the tutorial.
+**example3_sv()** Parameter estimation of three parameters in the SV model using PMH with the bootstrap PF as the likelihood estimator. The code is discussed in Section 5.1 and the results are presented in Section 5.2 as Figure 6. The code takes about an hour to run.
 
-* **example4_sv()** makes use of a run of *example3_sv()* to estimate the covariance of the posterior, which in turn is used to adapt the proposal for better performance, see Section 6.3.1 for details.
+**example4_sv()** Modified version of the code in *example3-sv.R* to make use of a better tailored parameter proposal. The details are discussed in Section 6.3.2 and the results are presented in the same section as Figures 7 and 8. Note that the only difference in the code is that the variable stepSize is changed.
 
-* **example5_sv()** makes use of a reparameterised SV model to improve performance, see Section 6.3.2 for details.
+**example5_sv()** Modified version of the code in *example3-sv.R* to make use of another parameterisation of the model and a better tailored parameter proposal. The details are discussed in Section 6.3.3 and the results are presented in the same section. Note that the differences in the code is the use of another implemenation of PMH ant that the variable stepSize is changed.
 
 ## Simple example
 The examples can be executed by e.g.
