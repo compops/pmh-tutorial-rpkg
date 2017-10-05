@@ -8,20 +8,15 @@ The tutorial is available as a preprint from http://arxiv.org/pdf/1511.01707. Ad
 ## Usage
 The main functions of the package are the five examples connected to the tutorial:
 
-* **example1_lgss()** Demostrates the particle filter for estimating the
-state in a linear Gaussian state space model.
+* **example1_lgss()** demostrates the particle filter for estimating the state in a linear Gaussian state space (LGSS) model, see Section 3.2 in the tutorial.
 
-* **example2_lgss()** Demostrates PMH for estimating the parameters in a 
-linear Gaussian state space model.
+* **example2_lgss()** demostrates PMH for estimating the parameters in an LGSS model, see Section 4.2 in the tutorial.
 
-* **example3_sv()** Demostrates PMH for estimating the parameters in a 
-stochastic volatility model.
+* **example3_sv()** demostrates PMH for estimating the parameters in a stochastic volatility (SV) model, see Section 5 in the tutorial.
 
-* **example4_sv()** Demostrates PMH for estimating the parameters in a 
-stochastic volatility model using a tailored proposal distribution.
+* **example4_sv()** makes use of a run of *example3_sv()* to estimate the covariance of the posterior, which in turn is used to adapt the proposal for better performance, see Section 6.3.1 for details.
 
-* **example5_sv()** Demostrates PMH for estimating the parameters in a 
-stochastic volatility model using a reparameterised model.
+* **example5_sv()** makes use of a reparameterised SV model to improve performance, see Section 6.3.2 for details.
 
 ## Simple example
 The examples can be executed by e.g.
@@ -40,8 +35,7 @@ or directly from GitHub by
 install.packages("devtools")
 devtools::install_github("compops/pmh-tutorial-rpkg/package")
 ``` 
-or downloaded as a binary from GitHub https://github.com/compops/pmh-tutorial-rpkg/releases/download/v1.1/pmhtutorial_1.1.tar.gz.
-
+or downloaded the [latest release as a binary package](https://github.com/compops/pmh-tutorial-rpkg/releases/latest).
 
 ## Dependencies
 The package requires Quandl and mvtnorm to be able to download financial data from the Internet and to generate random variables from the multivariate Gaussian distribution. These can be installed by executing
