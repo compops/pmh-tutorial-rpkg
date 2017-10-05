@@ -40,10 +40,10 @@ run the Markov chain on the  parameters \eqn{\vartheta=\{\mu,\psi,
 See Section 5 in the reference for more details.
 }
 \examples{
-\dontrun{
+\dontshow{
 # Change to 2500 for better results but longer run times. 
 # The number here is only useful for code tests.
-noIterations <- 200
+noIterations <- 10
 
 # Get the data from Quandl
 library("Quandl")
@@ -53,7 +53,7 @@ y <- as.numeric(100 * diff(log(d$"Index Value")))
 
 # Estimate the marginal posterior for phi
 pmhOutput <- particleMetropolisHastingsSVmodelReparameterised(
-  y, initialTheta = c(0, 0.9, 0.2), noParticles=500, 
+  y, initialTheta = c(0, 0.9, 0.2), noParticles=50, 
   noIterations=noIterations, stepSize=diag(c(0.05, 0.0002, 0.002)))
 
 # Plot the estimate
@@ -66,6 +66,29 @@ hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi),
 hist(pmhOutput$theta[,3], breaks=nbins, main="", 
   xlab=expression(sigma[v]), ylab="marginal posterior", 
   freq=FALSE, col="#66A61E")
+}
+\donttest{
+  # Get the data from Quandl
+  library("Quandl")
+  d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02", 
+              end_date="2014-01-02", type="zoo")
+  y <- as.numeric(100 * diff(log(d$"Index Value")))
+
+  # Estimate the marginal posterior for phi
+  pmhOutput <- particleMetropolisHastingsSVmodelReparameterised(
+    y, initialTheta = c(0, 0.9, 0.2), noParticles=500, 
+    noIterations=1000, stepSize=diag(c(0.05, 0.0002, 0.002)))
+
+  # Plot the estimate
+  nbins <- floor(sqrt(1000))
+  par(mfrow=c(3, 1))
+  hist(pmhOutput$theta[,1], breaks=nbins, main="", xlab=expression(mu), 
+    ylab="marginal posterior", freq=FALSE, col="#7570B3")
+  hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi), 
+    ylab="marginal posterior", freq=FALSE, col="#E7298A")
+  hist(pmhOutput$theta[,3], breaks=nbins, main="", 
+    xlab=expression(sigma[v]), ylab="marginal posterior", 
+    freq=FALSE, col="#66A61E")
 }
 }
 \references{

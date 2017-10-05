@@ -1,5 +1,6 @@
-\dontrun{
-# Change to noBurnInIterations=500, noIterations=5000 for better results
-# but longer run times. The numbers here are only useful for code tests.
-example4_sv(noBurnInIterations=50, noIterations=200)
+\dontshow{
+    example4_sv(noBurnInIterations=5, noIterations=10, noParticles=50)
+}
+\donttest{
+    example4_sv(noBurnInIterations=500, noIterations=5000)
 }

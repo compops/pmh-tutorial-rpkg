@@ -62,10 +62,11 @@ mixing of the Markov chain.
 See Section 5 in the reference for more details.
 }
 \examples{
-\dontrun{
-# Change to noBurnInIterations=500, noIterations=5000 for better results
-# but longer run times. The numbers here are only useful for code tests.
-example3_sv(noBurnInIterations=50, noIterations=200)
+\dontshow{
+    example3_sv(noBurnInIterations=5, noIterations=10, noParticles=50)
+}
+\donttest{
+    example3_sv(noBurnInIterations=500, noIterations=5000)
 }
 }
 \references{

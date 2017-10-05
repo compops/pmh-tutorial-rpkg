@@ -58,10 +58,11 @@ have better mixing properties.
 See Section 6.3.1 in the reference for more details.
 }
 \examples{
-\dontrun{
-# Change to noBurnInIterations=500, noIterations=5000 for better results
-# but longer run times. The numbers here are only useful for code tests.
-example4_sv(noBurnInIterations=50, noIterations=200)
+\dontshow{
+    example4_sv(noBurnInIterations=2, noIterations=5, noParticles=50)
+}
+\donttest{
+    example4_sv(noBurnInIterations=500, noIterations=5000)
 }
 }
 \references{

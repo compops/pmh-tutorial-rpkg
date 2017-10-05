@@ -43,7 +43,7 @@ y <- as.numeric(100 * diff(log(d$"Index Value")))
 
 # Estimate the filtered state using a particle filter
 theta <- c(-0.10, 0.97, 0.15)
-pfOutput <- particleFilterSVmodel(y, theta, noParticles=500)
+pfOutput <- particleFilterSVmodel(y, theta, noParticles=100)
 
 # Plot the estimate and the true state
 par(mfrow=c(2, 1))
