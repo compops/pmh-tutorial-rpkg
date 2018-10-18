@@ -5,14 +5,14 @@
 \title{Parameter estimation in a simple stochastic volatility model}
 \usage{
 example3_sv(noBurnInIterations = 2500, noIterations = 7500,
-  noParticles = 500, initialTheta = c(0, 0.9, 0.2), 
-  stepSize = diag(c(0.1, 0.01, 0.05)^2))
+  noParticles = 500, initialTheta = c(0, 0.9, 0.2),
+  stepSize = diag(c(0.1, 0.01, 0.05)^2), syntheticData = FALSE)
 }
 \arguments{
-\item{noBurnInIterations}{The number of burn-in iterations in the PMH 
+\item{noBurnInIterations}{The number of burn-in iterations in the PMH
 algorithm. Must be smaller than \code{noIterations}.}
 
-\item{noIterations}{The number of iterations in the PMH algorithm. 100 
+\item{noIterations}{The number of iterations in the PMH algorithm. 100
 iterations takes about a minute on a laptop to execute.}
 
 \item{noParticles}{The number of particles to use when estimating the likelihood.}
@@ -21,41 +21,43 @@ iterations takes about a minute on a laptop to execute.}
 
 \item{stepSize}{The step sizes of the random walk proposal. Given as a covariance
 matrix.}
+
+\item{syntheticData}{If TRUE, data is not downloaded from the Internet. This is only used when running tests of the package.}
 }
 \value{
-The function returns the estimated marginal parameter posteriors for each 
-parameter, the trace of the Markov chain and the resulting autocorrelation 
-function. The data is also presented with an estimate of the 
+The function returns the estimated marginal parameter posteriors for each
+parameter, the trace of the Markov chain and the resulting autocorrelation
+function. The data is also presented with an estimate of the
 log-volatility.
 
 The function returns a list with the elements:
 \itemize{
 \item{thhat: The estimate of the mean of the parameter posterior.}
 \item{xhat: The estimate of the mean of the log-volatility posterior.}
-\item{thhatSD: The estimate of the standard deviation of the parameter 
+\item{thhatSD: The estimate of the standard deviation of the parameter
 posterior.}
-\item{xhatSD: The estimate of the standard deviation of the log-volatility 
+\item{xhatSD: The estimate of the standard deviation of the log-volatility
 posterior.}
-\item{iact: The estimate of the integrated autocorrelation time for each 
+\item{iact: The estimate of the integrated autocorrelation time for each
 parameter.}
 \item{estCov: The estimate of the covariance of the parameter posterior.}
 }
 }
 \description{
-Minimal working example of parameter estimation in a stochastic volatility 
-model using the particle Metropolis-Hastings algorithm with a bootstrap 
-particle filter providing an unbiased estimator of the likelihood. The 
-code estimates the parameter posterior for three parameters using 
+Minimal working example of parameter estimation in a stochastic volatility
+model using the particle Metropolis-Hastings algorithm with a bootstrap
+particle filter providing an unbiased estimator of the likelihood. The
+code estimates the parameter posterior for three parameters using
 real-world data.
 }
 \details{
-The Particle Metropolis-Hastings (PMH) algorithm makes use of a Gaussian 
-random walk as the proposal for the parameters. The data are scaled 
-log-returns from the OMXS30 index during the period from January 2, 2012 
+The Particle Metropolis-Hastings (PMH) algorithm makes use of a Gaussian
+random walk as the proposal for the parameters. The data are scaled
+log-returns from the OMXS30 index during the period from January 2, 2012
 to January 2, 2014.
 
-This version of the code makes use of a somewhat well-tuned proposal as a 
-pilot run to estimate the posterior covariance and therefore increase the 
+This version of the code makes use of a somewhat well-tuned proposal as a
+pilot run to estimate the posterior covariance and therefore increase the
 mixing of the Markov chain.
 }
 \note{
@@ -63,15 +65,15 @@ See Section 5 in the reference for more details.
 }
 \examples{
 \dontshow{
-    example3_sv(noBurnInIterations=5, noIterations=10, noParticles=50)
+    example3_sv(noBurnInIterations=5, noIterations=10, noParticles=50, syntheticData=TRUE)
 }
 \donttest{
     example3_sv(noBurnInIterations=500, noIterations=5000)
 }
 }
 \references{
-Dahlin, J. & Schön, T. B. "Getting started with particle 
-Metropolis-Hastings for inference in nonlinear dynamical models." 
+Dahlin, J. & Schon, T. B. "Getting started with particle
+Metropolis-Hastings for inference in nonlinear dynamical models."
 pre-print, arXiv:1511.01707, 2017.
 }
 \author{

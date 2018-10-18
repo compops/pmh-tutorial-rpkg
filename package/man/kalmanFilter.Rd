@@ -55,7 +55,7 @@ plot(d$x-kfOutput$xHatFiltered, type="l", xlab="time",
   ylab="difference", bty="n", col="#7570B3")
 }
 \references{
-Dahlin, J. & Schön, T. B. "Getting started with particle 
+Dahlin, J. & Schon, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

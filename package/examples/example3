@@ -1,5 +1,5 @@
 \dontshow{
-    example3_sv(noBurnInIterations=5, noIterations=10, noParticles=50)
+    example3_sv(noBurnInIterations=5, noIterations=10, noParticles=50, syntheticData=TRUE)
 }
 \donttest{
     example3_sv(noBurnInIterations=500, noIterations=5000)

@@ -31,7 +31,7 @@ Generates data from a specific linear Gaussian state space model of the form
 Gaussian random variables, i.e. \eqn{N(0,1)}.
 }
 \references{
-Dahlin, J. & Schön, T. B. "Getting started with particle 
+Dahlin, J. & Schoen, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

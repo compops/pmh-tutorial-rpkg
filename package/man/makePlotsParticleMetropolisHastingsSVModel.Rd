@@ -4,8 +4,8 @@
 \alias{makePlotsParticleMetropolisHastingsSVModel}
 \title{Make plots for tutorial}
 \usage{
-makePlotsParticleMetropolisHastingsSVModel(y, res, 
-noBurnInIterations, noIterations, nPlot)
+makePlotsParticleMetropolisHastingsSVModel(y, res, noBurnInIterations,
+  noIterations, nPlot)
 }
 \arguments{
 \item{y}{Observations from the model for \eqn{t=1,...,T}.}
@@ -30,7 +30,7 @@ for each parameter.
 Creates diagnoistic plots from runs of the particle Metropolis-Hastings algorithm.
 }
 \references{
-Dahlin, J. & Schön, T. B. "Getting started with particle 
+Dahlin, J. & Schon, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

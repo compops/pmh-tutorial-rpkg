@@ -5,7 +5,7 @@
 \title{Particle Metropolis-Hastings algorithm for a stochastic volatility model
 model}
 \usage{
-particleMetropolisHastingsSVmodelReparameterised(y, initialTheta, 
+particleMetropolisHastingsSVmodelReparameterised(y, initialTheta,
   noParticles, noIterations, stepSize)
 }
 \arguments{
@@ -41,58 +41,55 @@ See Section 5 in the reference for more details.
 }
 \examples{
 \dontshow{
-# Change to 2500 for better results but longer run times. 
+# Change to 2500 for better results but longer run times.
 # The number here is only useful for code tests.
 noIterations <- 10
 
-# Get the data from Quandl
-library("Quandl")
-d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02", 
-            end_date="2014-01-02", type="zoo")
-y <- as.numeric(100 * diff(log(d$"Index Value")))
+# Create random data
+y <- rnorm(10)
 
 # Estimate the marginal posterior for phi
 pmhOutput <- particleMetropolisHastingsSVmodelReparameterised(
-  y, initialTheta = c(0, 0.9, 0.2), noParticles=50, 
+  y, initialTheta = c(0, 0.9, 0.2), noParticles=50,
   noIterations=noIterations, stepSize=diag(c(0.05, 0.0002, 0.002)))
 
 # Plot the estimate
 nbins <- floor(sqrt(noIterations))
 par(mfrow=c(3, 1))
-hist(pmhOutput$theta[,1], breaks=nbins, main="", xlab=expression(mu), 
+hist(pmhOutput$theta[,1], breaks=nbins, main="", xlab=expression(mu),
   ylab="marginal posterior", freq=FALSE, col="#7570B3")
-hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi), 
+hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi),
   ylab="marginal posterior", freq=FALSE, col="#E7298A")
-hist(pmhOutput$theta[,3], breaks=nbins, main="", 
-  xlab=expression(sigma[v]), ylab="marginal posterior", 
+hist(pmhOutput$theta[,3], breaks=nbins, main="",
+  xlab=expression(sigma[v]), ylab="marginal posterior",
   freq=FALSE, col="#66A61E")
 }
 \donttest{
   # Get the data from Quandl
   library("Quandl")
-  d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02", 
+  d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02",
               end_date="2014-01-02", type="zoo")
   y <- as.numeric(100 * diff(log(d$"Index Value")))
 
   # Estimate the marginal posterior for phi
   pmhOutput <- particleMetropolisHastingsSVmodelReparameterised(
-    y, initialTheta = c(0, 0.9, 0.2), noParticles=500, 
+    y, initialTheta = c(0, 0.9, 0.2), noParticles=500,
     noIterations=1000, stepSize=diag(c(0.05, 0.0002, 0.002)))
 
   # Plot the estimate
   nbins <- floor(sqrt(1000))
   par(mfrow=c(3, 1))
-  hist(pmhOutput$theta[,1], breaks=nbins, main="", xlab=expression(mu), 
+  hist(pmhOutput$theta[,1], breaks=nbins, main="", xlab=expression(mu),
     ylab="marginal posterior", freq=FALSE, col="#7570B3")
-  hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi), 
+  hist(pmhOutput$theta[,2], breaks=nbins, main="", xlab=expression(phi),
     ylab="marginal posterior", freq=FALSE, col="#E7298A")
-  hist(pmhOutput$theta[,3], breaks=nbins, main="", 
-    xlab=expression(sigma[v]), ylab="marginal posterior", 
+  hist(pmhOutput$theta[,3], breaks=nbins, main="",
+    xlab=expression(sigma[v]), ylab="marginal posterior",
     freq=FALSE, col="#66A61E")
 }
 }
 \references{
-Dahlin, J. & Schön, T. B. "Getting started with particle 
+Dahlin, J. & Schon, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }

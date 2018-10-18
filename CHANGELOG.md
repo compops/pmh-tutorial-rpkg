@@ -1,3 +1,6 @@
+# pmhtutorial 1.3
+* Changed \donttest environments to not download data from Quandl every time in accordance with comments from CRAN.
+
 # pmhtutorial 1.2
 * Removed \dontrun environments and replaced with \donttest in accordance with comments from CRAN.
 

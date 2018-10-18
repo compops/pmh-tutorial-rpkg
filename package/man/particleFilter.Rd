@@ -42,7 +42,7 @@ See Section 3 in the reference for more details.
 # Generates 500 observations from a linear state space model with
 # (phi, sigma_e, sigma_v) = (0.5, 1.0, 0.1) and zero initial state.
 theta <- c(0.5, 1.0, 0.1)
-d <- generateData(theta, noObservations=100, initialState=0.0) 
+d <- generateData(theta, noObservations=500, initialState=0.0) 
 
 # Estimate the filtered state using a Particle filter
 pfOutput <- particleFilter(d$y, theta, noParticles = 50, 
@@ -50,15 +50,15 @@ pfOutput <- particleFilter(d$y, theta, noParticles = 50,
 
 # Plot the estimate and the true state
 par(mfrow=c(3, 1))
-plot(d$x[1:100], type="l", xlab="time", ylab="true state", bty="n", 
+plot(d$x[1:500], type="l", xlab="time", ylab="true state", bty="n", 
   col="#1B9E77")
 plot(pfOutput$xHatFiltered, type="l", xlab="time", 
   ylab="paticle filter estimate", bty="n", col="#D95F02")
-plot(d$x[1:100]-pfOutput$xHatFiltered, type="l", xlab="time", 
+plot(d$x[1:500]-pfOutput$xHatFiltered, type="l", xlab="time", 
   ylab="difference", bty="n", col="#7570B3")
 }
 \references{
-Dahlin, J. & Schön, T. B. "Getting started with particle 
+Dahlin, J. & Schon, T. B. "Getting started with particle 
 Metropolis-Hastings for inference in nonlinear dynamical models." 
 pre-print, arXiv:1511.01707, 2017.
 }
