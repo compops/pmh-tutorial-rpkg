@@ -1,6 +1,6 @@
 ## Test environments
 * Ubuntu 18.04 (64-bit), R 3.4.4
-* Windows Server 2008 (64-bit), R 3.4.
+* Windows Server 2008 (64-bit), R 3.5.1 (2018-07-02)
 * Windows Server 2008 (64-bit), R unstable (2018-10-16 r75448)
 
 ## R CMD check results
