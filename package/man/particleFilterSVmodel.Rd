@@ -37,7 +37,6 @@ See Section 5 in the reference for more details.
 \examples{
 \dontshow{
   # Generate fake data
-  library("Quandl")
   y <- rnorm(100)
 
   # Estimate the filtered state using a particle filter
@@ -51,7 +50,7 @@ See Section 5 in the reference for more details.
   plot(pfOutput$xHatFiltered, type="l", xlab="time",
     ylab="estimate of log-volatility", bty="n", col="#D95F02")
 }
-\donttest{
+\dontrun{
   # Get the data from Quandl
   library("Quandl")
   d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02",

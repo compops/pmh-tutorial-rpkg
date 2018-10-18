@@ -1,6 +1,6 @@
 \dontshow{
     example5_sv(noBurnInIterations=5, noIterations=10, noParticles=50, syntheticData=TRUE)
 }
-\donttest{
-    example5_sv(noBurnInIterations=500, noIterations=5000)
+\dontrun{
+    example5_sv(noBurnInIterations=200, noIterations=1000)
 }

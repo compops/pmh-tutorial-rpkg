@@ -62,7 +62,7 @@ See Section 5 in the reference for more details.
     xlab=expression(sigma[v]), ylab="marginal posterior",
     freq=FALSE, col="#66A61E")
 }
-\donttest{
+\dontrun{
   # Get the data from Quandl
   library("Quandl")
   d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02",

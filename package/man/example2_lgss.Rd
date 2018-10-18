@@ -44,7 +44,7 @@ See Section 4.2 in the reference for more details.
     example2_lgss(noBurnInIterations=5, noIterations=10)
 }
 \donttest{
-    example2_lgss(noBurnInIterations=500, noIterations=5000)
+    example2_lgss(noBurnInIterations=200, noIterations=1000)
 }
 }
 \references{

@@ -67,8 +67,8 @@ See Section 5 in the reference for more details.
 \dontshow{
     example3_sv(noBurnInIterations=5, noIterations=10, noParticles=50, syntheticData=TRUE)
 }
-\donttest{
-    example3_sv(noBurnInIterations=500, noIterations=5000)
+\dontrun{
+    example3_sv(noBurnInIterations=200, noIterations=1000)
 }
 }
 \references{

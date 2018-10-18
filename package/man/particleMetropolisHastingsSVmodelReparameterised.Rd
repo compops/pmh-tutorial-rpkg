@@ -64,7 +64,7 @@ hist(pmhOutput$theta[,3], breaks=nbins, main="",
   xlab=expression(sigma[v]), ylab="marginal posterior",
   freq=FALSE, col="#66A61E")
 }
-\donttest{
+\dontrun{
   # Get the data from Quandl
   library("Quandl")
   d <- Quandl("NASDAQOMX/OMXS30", start_date="2012-01-02",
