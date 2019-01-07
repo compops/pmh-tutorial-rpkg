@@ -120,7 +120,7 @@ example5_sv <- function(noBurnInIterations=2500, noIterations=7500, noParticles=
   ##############################################################################
   # Plot the results
   ##############################################################################
-  noIterationsToPlot <- min(c(100, noIterations-noBurnInIterations))
+  noIterationsToPlot <- min(c(1500, noIterations - noBurnInIterations))
   iact <- makePlotsParticleMetropolisHastingsSVModel(y, res, noBurnInIterations,
                                                      noIterations, noIterationsToPlot)
 

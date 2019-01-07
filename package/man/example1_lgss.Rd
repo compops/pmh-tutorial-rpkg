@@ -8,10 +8,10 @@ example1_lgss()
 }
 \value{
 Returns a plot with the generated observations y and the difference in the
-state estimates obtained by the Kalman filter (the optimal solution) and 
-the particle filter (with 20 particles). Furthermore, the function returns 
-plots of the estimated bias and mean squared error of the state estimate 
-obtained using the particle filter (while varying the number of particles) 
+state estimates obtained by the Kalman filter (the optimal solution) and
+the particle filter (with 20 particles). Furthermore, the function returns
+plots of the estimated bias and mean squared error of the state estimate
+obtained using the particle filter (while varying the number of particles)
 and the Kalman estimates.
 
 The function returns a list with the elements:
@@ -19,20 +19,20 @@ The function returns a list with the elements:
 \item{y: The observations generated from the model.}
 \item{x: The states generated from the model.}
 \item{kfEstimate: The estimate of the state from the Kalman filter.}
-\item{pfEstimate: The estimate of the state from the particle filter with 
+\item{pfEstimate: The estimate of the state from the particle filter with
 20 particles.}
 }
 }
 \description{
-Minimal working example of state estimation in a linear Gaussian state 
-space model using Kalman filtering and a fully-adapted particle filter. 
-The code estimates the bias and mean squared error (compared with the 
-Kalman estimate) while varying the number of particles in the particle 
+Minimal working example of state estimation in a linear Gaussian state
+space model using Kalman filtering and a fully-adapted particle filter.
+The code estimates the bias and mean squared error (compared with the
+Kalman estimate) while varying the number of particles in the particle
 filter.
 }
 \details{
-The Kalman filter is a standard implementation without an input. The 
-particle filter is fully adapted (i.e. takes the current observation into 
+The Kalman filter is a standard implementation without an input. The
+particle filter is fully adapted (i.e. takes the current observation into
 account when proposing new particles and computing the weights).
 }
 \note{
@@ -42,8 +42,8 @@ See Section 3.2 in the reference for more details.
 example1_lgss()
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
-Metropolis-Hastings for inference in nonlinear dynamical models." 
+Dahlin, J. & Schon, T. B. "Getting started with particle
+Metropolis-Hastings for inference in nonlinear dynamical models."
 pre-print, arXiv:1511.01707, 2017.
 }
 \author{

@@ -7,38 +7,38 @@
 ##############################################################################
 
 #' Parameter estimation in a linear Gaussian state space model
-#' 
+#'
 #' @description
-#' Minimal working example of parameter estimation in a linear Gaussian state 
-#' space model using the particle Metropolis-Hastings algorithm with a 
-#' fully-adapted particle filter providing an unbiased estimator of the 
-#' likelihood. The code estimates the parameter posterior for one parameter 
-#' using simulated data. 
-#' @details 
-#' The Particle Metropolis-Hastings (PMH) algorithm makes use of a Gaussian 
-#' random walk as the proposal for the parameter. The PMH algorithm is run 
-#' using different step lengths in the proposal. This is done to illustrate 
-#' the difficulty when tuning the proposal and the impact of a too 
+#' Minimal working example of parameter estimation in a linear Gaussian state
+#' space model using the particle Metropolis-Hastings algorithm with a
+#' fully-adapted particle filter providing an unbiased estimator of the
+#' likelihood. The code estimates the parameter posterior for one parameter
+#' using simulated data.
+#' @details
+#' The Particle Metropolis-Hastings (PMH) algorithm makes use of a Gaussian
+#' random walk as the proposal for the parameter. The PMH algorithm is run
+#' using different step lengths in the proposal. This is done to illustrate
+#' the difficulty when tuning the proposal and the impact of a too
 #' small/large step length.
 #' @param noBurnInIterations The number of burn-in iterations in the PMH algorithm.
 #' This parameter must be smaller than \code{noIterations}.
-#' @param noIterations The number of iterations in the PMH algorithm. 100 iterations 
-#' takes about ten seconds on a laptop to execute. 5000 iterations are used 
+#' @param noIterations The number of iterations in the PMH algorithm. 100 iterations
+#' takes about ten seconds on a laptop to execute. 5000 iterations are used
 #' in the reference below.
 #' @param noParticles The number of particles to use when estimating the likelihood.
 #' @param initialPhi The initial guess of the parameter phi.
-#' @return 
+#' @return
 #' Returns the estimate of the posterior mean.
-#' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
+#' @references
+#' Dahlin, J. & Schon, T. B. "Getting started with particle
+#' Metropolis-Hastings for inference in nonlinear dynamical models."
 #' pre-print, arXiv:1511.01707, 2017.
-#' @author 
+#' @author
 #' Johan Dahlin <uni (at) johandahlin.com.nospam>
-#' @note 
+#' @note
 #' See Section 4.2 in the reference for more details.
 #' @example ./examples/example2
-#' @keywords 
+#' @keywords
 #' misc
 #' @export
 #' @importFrom grDevices col2rgb
@@ -184,12 +184,13 @@ example2_lgss <- function(noBurnInIterations = 1000, noIterations = 5000, noPart
         lwd = 1,
         lty = "dotted")
 
-  # Plot the trace of the Markov chain during 100 iterations after the burn-in
-  grid <- seq(noBurnInIterations, noBurnInIterations + 100 - 1, 1)
+  # Plot the trace of the Markov chain during some iterations after the burn-in
+  iterationsToPlot <- ifelse(noBurnInIterations + 1000 < noIterations, 1000, 100)
+  grid <- seq(noBurnInIterations, noBurnInIterations + iterationsToPlot - 1, 1)
 
   plot(
     grid,
-    resTh1[1:100],
+    resTh1[1:iterationsToPlot],
     col = '#7570B3',
     type = "l",
     xlab = "iteration",
@@ -202,14 +203,14 @@ example2_lgss <- function(noBurnInIterations = 1000, noIterations = 5000, noPart
         lty = "dotted")
   polygon(
     c(grid, rev(grid)),
-    c(resTh1[1:100], rep(0.4, 100)),
+    c(resTh1[1:iterationsToPlot], rep(0.4, iterationsToPlot)),
     border = NA,
     col = rgb(t(col2rgb("#7570B3")) / 256, alpha = 0.25)
   )
 
   plot(
     grid,
-    resTh2[1:100],
+    resTh2[1:iterationsToPlot],
     col = '#E7298A',
     type = "l",
     xlab = "iteration",
@@ -222,14 +223,14 @@ example2_lgss <- function(noBurnInIterations = 1000, noIterations = 5000, noPart
         lty = "dotted")
   polygon(
     c(grid, rev(grid)),
-    c(resTh2[1:100], rep(0.4, 100)),
+    c(resTh2[1:iterationsToPlot], rep(0.4, iterationsToPlot)),
     border = NA,
     col = rgb(t(col2rgb("#E7298A")) / 256, alpha = 0.25)
   )
 
   plot(
     grid,
-    resTh3[1:100],
+    resTh3[1:iterationsToPlot],
     col = '#66A61E',
     type = "l",
     xlab = "iteration",
@@ -242,7 +243,7 @@ example2_lgss <- function(noBurnInIterations = 1000, noIterations = 5000, noPart
         lty = "dotted")
   polygon(
     c(grid, rev(grid)),
-    c(resTh3[1:100], rep(0.4, 100)),
+    c(resTh3[1:iterationsToPlot], rep(0.4, iterationsToPlot)),
     border = NA,
     col = rgb(t(col2rgb("#66A61E")) / 256, alpha = 0.25)
   )

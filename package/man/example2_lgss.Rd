@@ -11,8 +11,8 @@ example2_lgss(noBurnInIterations = 1000, noIterations = 5000,
 \item{noBurnInIterations}{The number of burn-in iterations in the PMH algorithm.
 This parameter must be smaller than \code{noIterations}.}
 
-\item{noIterations}{The number of iterations in the PMH algorithm. 100 iterations 
-takes about ten seconds on a laptop to execute. 5000 iterations are used 
+\item{noIterations}{The number of iterations in the PMH algorithm. 100 iterations
+takes about ten seconds on a laptop to execute. 5000 iterations are used
 in the reference below.}
 
 \item{noParticles}{The number of particles to use when estimating the likelihood.}
@@ -23,17 +23,17 @@ in the reference below.}
 Returns the estimate of the posterior mean.
 }
 \description{
-Minimal working example of parameter estimation in a linear Gaussian state 
-space model using the particle Metropolis-Hastings algorithm with a 
-fully-adapted particle filter providing an unbiased estimator of the 
-likelihood. The code estimates the parameter posterior for one parameter 
+Minimal working example of parameter estimation in a linear Gaussian state
+space model using the particle Metropolis-Hastings algorithm with a
+fully-adapted particle filter providing an unbiased estimator of the
+likelihood. The code estimates the parameter posterior for one parameter
 using simulated data.
 }
 \details{
-The Particle Metropolis-Hastings (PMH) algorithm makes use of a Gaussian 
-random walk as the proposal for the parameter. The PMH algorithm is run 
-using different step lengths in the proposal. This is done to illustrate 
-the difficulty when tuning the proposal and the impact of a too 
+The Particle Metropolis-Hastings (PMH) algorithm makes use of a Gaussian
+random walk as the proposal for the parameter. The PMH algorithm is run
+using different step lengths in the proposal. This is done to illustrate
+the difficulty when tuning the proposal and the impact of a too
 small/large step length.
 }
 \note{
@@ -48,8 +48,8 @@ See Section 4.2 in the reference for more details.
 }
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
-Metropolis-Hastings for inference in nonlinear dynamical models." 
+Dahlin, J. & Schon, T. B. "Getting started with particle
+Metropolis-Hastings for inference in nonlinear dynamical models."
 pre-print, arXiv:1511.01707, 2017.
 }
 \author{

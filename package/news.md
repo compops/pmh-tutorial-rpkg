@@ -1,7 +1,13 @@
+# pmhtutorial 1.4
+* example1-lgss() now returns the information about log-Bias and log-MSE with respect to the number of particles.
+* Changed plots to show more the same number of iterations as in the Journal of Statistical Software paper.
+*
+
 # pmhtutorial 1.3
 * Changed \donttest environments to not download data from Quandl every time in accordance with comments from CRAN.
 
 # pmhtutorial 1.2
+
 * Removed \dontrun environments and replaced with \donttest in accordance with comments from CRAN.
 
 # pmhtutorial 1.1

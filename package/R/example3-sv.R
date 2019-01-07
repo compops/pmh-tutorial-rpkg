@@ -49,6 +49,7 @@
 #' \item{iact: The estimate of the integrated autocorrelation time for each
 #' parameter.}
 #' \item{estCov: The estimate of the covariance of the parameter posterior.}
+#' \item{theta: The trace of the chain exploring the parameter posterior.}
 #' }
 #' @references
 #' Dahlin, J. & Schon, T. B. "Getting started with particle
@@ -108,7 +109,7 @@ example3_sv <- function(noBurnInIterations=2500, noIterations=7500, noParticles=
   ##############################################################################
   # Plot the results
   ##############################################################################
-  noIterationsToPlot <- min(c(100, noIterations-noBurnInIterations))
+  noIterationsToPlot <- min(c(1500, noIterations - noBurnInIterations))
   iact <- makePlotsParticleMetropolisHastingsSVModel(y, res, noBurnInIterations,
                                                      noIterations, noIterationsToPlot)
 
@@ -127,5 +128,5 @@ example3_sv <- function(noBurnInIterations=2500, noIterations=7500, noParticles=
   # Estimate the covariance of the posterior to tune the proposal
   estCov <- var(resTh)
 
-  list(thhat=thhat, xhat=xhat, thhatSD=thhatSD, xhatSD=xhatSD, iact=iact, estCov=estCov)
+  list(thhat=thhat, xhat=xhat, thhatSD=thhatSD, xhatSD=xhatSD, iact=iact, estCov=estCov, theta=resTh)
 }

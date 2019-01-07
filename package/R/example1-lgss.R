@@ -7,43 +7,43 @@
 ##############################################################################
 
 #' State estimation in a linear Gaussian state space model
-#' 
+#'
 #' @description
-#' Minimal working example of state estimation in a linear Gaussian state 
-#' space model using Kalman filtering and a fully-adapted particle filter. 
-#' The code estimates the bias and mean squared error (compared with the 
-#' Kalman estimate) while varying the number of particles in the particle 
+#' Minimal working example of state estimation in a linear Gaussian state
+#' space model using Kalman filtering and a fully-adapted particle filter.
+#' The code estimates the bias and mean squared error (compared with the
+#' Kalman estimate) while varying the number of particles in the particle
 #' filter.
 #' @details
-#' The Kalman filter is a standard implementation without an input. The 
-#' particle filter is fully adapted (i.e. takes the current observation into 
+#' The Kalman filter is a standard implementation without an input. The
+#' particle filter is fully adapted (i.e. takes the current observation into
 #' account when proposing new particles and computing the weights).
-#' @return 
+#' @return
 #' Returns a plot with the generated observations y and the difference in the
-#' state estimates obtained by the Kalman filter (the optimal solution) and 
-#' the particle filter (with 20 particles). Furthermore, the function returns 
-#' plots of the estimated bias and mean squared error of the state estimate 
-#' obtained using the particle filter (while varying the number of particles) 
+#' state estimates obtained by the Kalman filter (the optimal solution) and
+#' the particle filter (with 20 particles). Furthermore, the function returns
+#' plots of the estimated bias and mean squared error of the state estimate
+#' obtained using the particle filter (while varying the number of particles)
 #' and the Kalman estimates.
-#' 
+#'
 #' The function returns a list with the elements:
 #' \itemize{
 #' \item{y: The observations generated from the model.}
 #' \item{x: The states generated from the model.}
 #' \item{kfEstimate: The estimate of the state from the Kalman filter.}
-#' \item{pfEstimate: The estimate of the state from the particle filter with 
+#' \item{pfEstimate: The estimate of the state from the particle filter with
 #' 20 particles.}
 #' }
-#' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
+#' @references
+#' Dahlin, J. & Schon, T. B. "Getting started with particle
+#' Metropolis-Hastings for inference in nonlinear dynamical models."
 #' pre-print, arXiv:1511.01707, 2017.
-#' @author 
+#' @author
 #' Johan Dahlin <uni (at) johandahlin.com.nospam>
-#' @note 
+#' @note
 #' See Section 3.2 in the reference for more details.
 #' @example ./examples/example1
-#' @keywords 
+#' @keywords
 #' misc
 #' @export
 #' @importFrom grDevices col2rgb
@@ -131,7 +131,7 @@ example1_lgss <- function() {
   )
 
   # Compute bias and MSE
-  logBiasMSE <- matrix(0, nrow = 7, ncol = 2)
+  logBiasMSE <- matrix(0, nrow = 7, ncol = 3)
   gridN <- c(10, 20, 50, 100, 200, 500, 1000)
 
   for (ii in 1:length(gridN)) {
@@ -139,9 +139,10 @@ example1_lgss <- function() {
       particleFilter(y, c(phi, sigmav, sigmae), gridN[ii], initialState)
     pfEstimate <- pfEstimate$xHatFiltered
     kfEstimate <- outputKF$xHatFiltered[-(T + 1)]
-    
-    logBiasMSE[ii, 1] <- log(mean(abs(pfEstimate - kfEstimate)))
-    logBiasMSE[ii, 2] <- log(mean((pfEstimate - kfEstimate) ^ 2))
+
+    logBiasMSE[ii, 1] <- gridN[ii]
+    logBiasMSE[ii, 2] <- log(mean(abs(pfEstimate - kfEstimate)))
+    logBiasMSE[ii, 3] <- log(mean((pfEstimate - kfEstimate) ^ 2))
   }
 
   ##############################################################################
@@ -149,7 +150,7 @@ example1_lgss <- function() {
   ##############################################################################
   plot(
     gridN,
-    logBiasMSE[, 1],
+    logBiasMSE[, 2],
     col = "#E7298A",
     type = "l",
     xlab = "no. particles (N)",
@@ -159,15 +160,15 @@ example1_lgss <- function() {
   )
   polygon(
     c(gridN, rev(gridN)),
-    c(logBiasMSE[, 1], rep(-7, length(gridN))),
+    c(logBiasMSE[, 2], rep(-7, length(gridN))),
     border = NA,
     col = rgb(t(col2rgb("#E7298A")) / 256, alpha = 0.25)
   )
-  points(gridN, logBiasMSE[, 1], col = "#E7298A", pch = 19)
+  points(gridN, logBiasMSE[, 2], col = "#E7298A", pch = 19)
 
   plot(
     gridN,
-    logBiasMSE[, 2],
+    logBiasMSE[, 3],
     col = "#66A61E",
     lwd = 1.5,
     type = "l",
@@ -178,11 +179,11 @@ example1_lgss <- function() {
   )
   polygon(
     c(gridN, rev(gridN)),
-    c(logBiasMSE[, 2], rep(-12, length(gridN))),
+    c(logBiasMSE[, 3], rep(-12, length(gridN))),
     border = NA,
     col = rgb(t(col2rgb("#66A61E")) / 256, alpha = 0.25)
   )
-  points(gridN, logBiasMSE[, 2], col = "#66A61E", pch = 19)
+  points(gridN, logBiasMSE[, 3], col = "#66A61E", pch = 19)
 
-  list(y=y, x=x, pfEstimate=pfEstimate, kfEstimate=kfEstimate)  
+  list(y=y, x=x, pfEstimate=pfEstimate, kfEstimate=kfEstimate, logBiasMSE=logBiasMSE)
 }

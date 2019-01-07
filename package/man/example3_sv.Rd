@@ -41,6 +41,7 @@ posterior.}
 \item{iact: The estimate of the integrated autocorrelation time for each
 parameter.}
 \item{estCov: The estimate of the covariance of the parameter posterior.}
+\item{theta: The trace of the chain exploring the parameter posterior.}
 }
 }
 \description{

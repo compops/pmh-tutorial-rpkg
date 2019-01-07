@@ -79,6 +79,9 @@
 example4_sv <- function(noBurnInIterations=2500, noIterations=7500, noParticles=500,
                          initialTheta=c(0, 0.9, 0.2), syntheticData=FALSE) {
 
+  # Set the random seed to replicate results in tutorial
+  set.seed(10)
+
   ##############################################################################
   # Load data
   ##############################################################################
@@ -111,13 +114,12 @@ example4_sv <- function(noBurnInIterations=2500, noIterations=7500, noParticles=
     nrow = 3
   )
   stepSize <- 2.562^2 / 3 * stepSize
-
   res <- particleMetropolisHastingsSVmodel(y, initialTheta, noParticles, noIterations, stepSize)
 
   ##############################################################################
   # Plot the results
   ##############################################################################
-  noIterationsToPlot <- min(c(100, noIterations-noBurnInIterations))
+  noIterationsToPlot <- min(c(1500, noIterations - noBurnInIterations))
   iact <- makePlotsParticleMetropolisHastingsSVModel(y, res, noBurnInIterations,
                                                      noIterations, noIterationsToPlot)
 
