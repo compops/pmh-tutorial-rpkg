@@ -51,8 +51,8 @@ install.packages(c("devtools", "Quandl", "mvtnorm"))
 library(devtools)
 devtools::document()
 devtools::check(manual=TRUE)
-devtools::build_win(version="R-devel")
-devtools::build_win(version="R-release")
+devtools::check_win_devel()
+devtools::check_win_release()
 devtools::build()
 ```
 An e-mail will be received after 10-20 mins with the result of the rest run on Windows. Also, install and check the package on your local computer. Especially, the LaTeX renderings and similar can be broken.

@@ -1,7 +1,7 @@
 ## Test environments
-* Ubuntu 18.04 (64-bit), R 3.4.4
-* Windows Server 2008 (64-bit), R 3.5.1 (2018-07-02)
-* Windows Server 2008 (64-bit), R unstable (2018-10-16 r75448)
+* Ubuntu 18.10 (64-bit), R 3.5.1
+* Windows Server 2008 (64-bit), R 3.5.2 (2018-12-20)
+* Windows Server 2008 (64-bit), R unstable (2019-01-09 r75961)
 
 ## R CMD check results
 There were no WARNINGSs or ERRORs.
