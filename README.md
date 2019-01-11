@@ -61,5 +61,6 @@ devtools::install()
 ```
 If everything is fine and all the tests are passed then submit the new release to CRAN by
 ``` R
+devtools::check_rhub()
 devtools::release()
 ```
