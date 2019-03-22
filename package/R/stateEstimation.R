@@ -31,11 +31,12 @@
 #' \item{weights: The particle weights at each time point.}
 #' }
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note 
 #' See Section 3 in the reference for more details.
 #' @keywords 
@@ -126,11 +127,12 @@ particleFilter <- function(y, theta, noParticles, initialState) {
 #' \item{logLikelihood: The estimate of the log-likelihood.}
 #' }
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note 
 #' See Section 3 in the reference for more details.
 #' @keywords 
@@ -201,11 +203,12 @@ kalmanFilter <- function(y, theta, initialState, initialStateCovariance) {
 #' \item{logLikelihood: The estimate of the log-likelihood.}
 #' }
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note 
 #' See Section 5 in the reference for more details.
 #' @keywords 

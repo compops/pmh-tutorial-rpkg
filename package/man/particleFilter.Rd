@@ -58,11 +58,12 @@ plot(d$x[1:500]-pfOutput$xHatFiltered, type="l", xlab="time",
   ylab="difference", bty="n", col="#7570B3")
 }
 \references{
-Dahlin, J. & Schon, T. B. "Getting started with particle 
-Metropolis-Hastings for inference in nonlinear dynamical models." 
-pre-print, arXiv:1511.01707, 2017.
+Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+Journal of Statistical Software, Code Snippets,
+88(2): 1--41, 2019.
 }
 \author{
-Johan Dahlin <uni (at) johandahlin.com.nospam>
+Johan Dahlin \email{uni@johandahlin.com}
 }
 \keyword{ts}

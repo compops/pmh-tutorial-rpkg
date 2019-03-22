@@ -27,11 +27,12 @@
 #' \item{y: The observation for \eqn{t=0,...,T}.}
 #' }
 #' @references 
-#' Dahlin, J. & Schoen, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @keywords 
 #' datagen
 #' @export

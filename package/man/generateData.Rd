@@ -31,11 +31,12 @@ Generates data from a specific linear Gaussian state space model of the form
 Gaussian random variables, i.e. \eqn{N(0,1)}.
 }
 \references{
-Dahlin, J. & Schoen, T. B. "Getting started with particle 
-Metropolis-Hastings for inference in nonlinear dynamical models." 
-pre-print, arXiv:1511.01707, 2017.
+Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+Journal of Statistical Software, Code Snippets,
+88(2): 1--41, 2019.
 }
 \author{
-Johan Dahlin <uni (at) johandahlin.com.nospam>
+Johan Dahlin \email{uni@johandahlin.com}
 }
 \keyword{datagen}

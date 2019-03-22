@@ -28,11 +28,12 @@
 #' The trace of the Markov chain exploring the marginal posterior for 
 #' \eqn{\phi}.
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note 
 #' See Section 4 in the reference for more details.
 #' @keywords 
@@ -137,11 +138,12 @@ particleMetropolisHastings <- function(y, initialPhi, sigmav, sigmae,
 #' @return
 #' The trace of the Markov chain exploring the posterior of \eqn{\theta}.
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note 
 #' See Section 5 in the reference for more details.
 #' @keywords 
@@ -280,11 +282,12 @@ particleMetropolisHastingsSVmodel <- function(y, initialTheta, noParticles,
 #' @return
 #' The trace of the Markov chain exploring the posterior of \eqn{\theta}.
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note 
 #' See Section 5 in the reference for more details.
 #' @keywords 

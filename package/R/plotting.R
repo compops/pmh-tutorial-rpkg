@@ -23,11 +23,12 @@
 #' well as the estimate of the integrated autocorrelation time
 #' for each parameter.
 #' @references 
-#' Dahlin, J. & Schon, T. B. "Getting started with particle 
-#' Metropolis-Hastings for inference in nonlinear dynamical models." 
-#' pre-print, arXiv:1511.01707, 2017.
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
 #' @author 
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>s
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @export
 #' @importFrom grDevices col2rgb
 #' @importFrom grDevices rgb

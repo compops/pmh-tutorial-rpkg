@@ -1,7 +1,7 @@
 Package: pmhtutorial
 Type: Package
 Title: Minimal Working Examples for Particle Metropolis-Hastings
-Version: 1.4
+Version: 1.5
 Author: Johan Dahlin
 Maintainer: Johan Dahlin <uni@johandahlin.com>
 URL: https://github.com/compops/pmh-tutorial-rpkg

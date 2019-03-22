@@ -50,12 +50,13 @@
 #' parameter.}
 #' \item{estCov: The estimate of the covariance of the parameter posterior.}
 #' }
-#' @references
-#' Dahlin, J. & Schon, T. B. "Getting started with particle
-#' Metropolis-Hastings for inference in nonlinear dynamical models."
-#' pre-print, arXiv:1511.01707, 2017.
-#' @author
-#' Johan Dahlin <uni (at) johandahlin.com.nospam>
+#' @references 
+#' Dahlin, J. & Schon, T. B. "Getting Started with Particle 
+#' Metropolis-Hastings for Inference in Nonlinear Dynamical Models." 
+#' Journal of Statistical Software, Code Snippets,
+#' 88(2): 1--41, 2019.
+#' @author 
+#' Johan Dahlin \email{uni@@johandahlin.com}
 #' @note
 #' See Section 6.3.2 in the reference for more details.
 #' @example ./examples/example5
